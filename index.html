@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTELIER</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <div class="row top ">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <h1 class="heading mb-0">HOTELIER</h1>
+                <!-- Navbar starts here -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#rooms">Rooms</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Booking</a></li>
+                                    <li><a class="dropdown-item" href="#">Our Team</a></li>
+                                    <li><a class="dropdown-item" href="#">Testimonial</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Banner section  -->
+
+        <div class="row banner d-flex justify-content-between align-items-center">
+            <div class="col-12">
+                <p class="banner-text">Luxury Living</p>
+                <h2 class="banner-title">Discover A Brand Luxurious Hotel</h2>
+                <button type="button" class="btn btn-rooms text-white">OUR ROOMS</button>
+                <button type="button" class="btn btn-book" id="book-room">BOOK A ROOM</button>
+            </div>
+        </div>
+        <!-- booking section  -->
+
+        <div class="row justify-content-center mt-5" data-aos="flip-right">
+            <div class="col-md-8">
+                <div class="card p-4 bg-white">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="check-in" class="form-label">Check-in</label>
+                                <input type="date" class="form-control" id="check-in" name="check-in"
+                                    placeholder="Check-in" onfocus="this.showPicker()" required>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="check-out" class="form-label">Check-out</label>
+                                <input type="date" class="form-control" id="check-out" name="check-out"
+                                    placeholder="Check-out" onfocus="this.showPicker()" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="adults" class="form-label">Adults</label>
+                                <select class="form-select" id="adults" name="adults" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="children" class="form-label">Children</label>
+                                <select class="form-select" id="children" name="children" required>
+                                    <option value="">Select</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 mb-3 d-flex align-items-end">
+                                <button type="submit" class="btn  w-100">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- About Section  -->
+        <div class="row about-section" id="about">
+            <div class="col-md-6 about-left">
+                <h2 class="about-title">ABOUT US</h2>
+                <h1>Welcome to <span class="highlight-text">Hotelier</span></h1>
+                <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel sapien
+                    ut mauris tincidunt pretium et nec lectus.</p>
+                <div class="row about-stats">
+                    <div class="col-md-4 stat-item">
+                        <i class='bx bx-home-alt'></i>
+                        <h2>1234</h2>
+                        <h3>Rooms</h3>
+                    </div>
+                    <div class="col-md-4 stat-item">
+                        <i class='bx bxs-group'></i>
+                        <h2>1234</h2>
+                        <h3>Clients</h3>
+                    </div>
+                    <div class="col-md-4 stat-item">
+                        <i class='bx bxs-group'></i>
+                        <h2>1234</h2>
+                        <h3>Staffs</h3>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn-explore">EXPLORE MORE</button>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+                <div class="row g-3">
+                    <div class="col-6 text-end">
+                        <img src="./images/about-1.jpg" alt="about image 1"
+                            class="img-fluid rounded shadow-sm wow zoomIn"
+                            style="visibility: visible; animation-delay: 0.1s;">
+                    </div>
+                    <div class="col-6 text-start">
+                        <img src="./images/about-2.jpg" alt="about image 2"
+                            class="img-fluid rounded shadow-sm wow zoomIn"
+                            style="visibility: visible; animation-delay: 0.3s;">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img src="./images/about-3.jpg" alt="about image 3"
+                            class="img-fluid rounded shadow-sm wow zoomIn"
+                            style="visibility: visible; animation-delay: 0.5s;">
+                    </div>
+                    <div class="col-6 text-start">
+                        <img src="./images/about-4.jpg" alt="about image 4"
+                            class="img-fluid rounded shadow-sm wow zoomIn"
+                            style="visibility: visible; animation-delay: 0.7s;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Rooms Section  -->
+        <div class="row py-5">
+            <div class="col-md-12 text-center">
+                <p class="section-title">OUR ROOMS</p>
+                <h2 class="section-header">Explore Our <span class="highlighted-text">ROOMS</span></h2>
+            </div>
+        </div>
+        <div class="row" id="rooms">
+            <div class="col-md-4">
+                <div class="card text-start room-card shadow-lg">
+                    <img class="card-img-top room-image" src="./images/room-1.jpg" alt="Junior Suite" />
+                    <div class="card-body room-card-body">
+                        <h4 class="card-title room-title">Junior Suite</h4>
+                        <p class="card-text room-description">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="room-price">
+                            <span class="price-text">Price:</span> <span class="price">$150 per night</span>
+                        </div>
+                        <div class="d-flex room-rating">
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star-half-alt text-warning star-icon"></span>
+                        </div>
+                        <div class="d-flex room-details mt-2">
+                            <span class="fa fa-bed me-2 detail-icon"></span><span>3 Beds</span>
+                            <span class="fa fa-bath me-2 detail-icon ms-3"></span><span>2 Baths</span>
+                            <span class="fa fa-wifi me-2 detail-icon ms-3"></span><span>Wi-Fi</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button class="btn btn-outline-room btn-sm">View Details</button>
+                            <button class="btn btn-room btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-start room-card shadow-lg">
+                    <img class="card-img-top room-image" src="./images/room-2.jpg" alt="Executive Suite" />
+                    <div class="card-body room-card-body">
+                        <h4 class="card-title room-title">Executive Suite</h4>
+                        <p class="card-text room-description">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="room-price">
+                            <span class="price-text">Price:</span> <span class="price">$180 per night</span>
+                        </div>
+                        <div class="d-flex room-rating">
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star-half-alt text-warning star-icon"></span>
+                            <span class="fa fa-star-o text-warning star-icon"></span>
+                        </div>
+                        <div class="d-flex room-details mt-2">
+                            <span class="fa fa-bed me-2 detail-icon"></span><span>3 Beds</span>
+                            <span class="fa fa-bath me-2 detail-icon ms-3"></span><span>2 Baths</span>
+                            <span class="fa fa-wifi me-2 detail-icon ms-3"></span><span>Wi-Fi</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button class="btn btn-outline-room btn-sm">View Details</button>
+                            <button class="btn btn-room btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-start room-card shadow-lg">
+                    <img class="card-img-top room-image" src="./images/room-3.jpg" alt="Super Deluxe" />
+                    <div class="card-body room-card-body">
+                        <h4 class="card-title room-title">Super Deluxe</h4>
+                        <p class="card-text room-description">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <div class="room-price">
+                            <span class="price-text">Price:</span> <span class="price">$220 per night</span>
+                        </div>
+                        <div class="d-flex room-rating">
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                            <span class="fa fa-star text-warning star-icon"></span>
+                        </div>
+                        <div class="d-flex room-details mt-2">
+                            <span class="fa fa-bed me-2 detail-icon"></span><span>3 Beds</span>
+                            <span class="fa fa-bath me-2 detail-icon ms-3"></span><span>2 Baths</span>
+                            <span class="fa fa-wifi me-2 detail-icon ms-3"></span><span>Wi-Fi</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button class="btn btn-outline-room btn-sm">View Details</button>
+                            <button class="btn btn-room btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Luxury Room Section -->
+        <div class="row luxury-living-section py-5 d-flex justify-content-center align-items-center">
+            <div class="col-md-6 luxury-text-container">
+                <h4 class="luxury-living-heading text-uppercase pt-4">LUXURY LIVING</h4>
+                <h2 class="luxury-discovery-title text-white">Discover A Brand New Luxurious Hotel</h2>
+                <p class="luxury-description-text text-white">Tempor erat elitr rebum at clita. Diam dolor diam ipsum
+                    sit. Aliqu
+                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
+                    dolore erat amet.</p>
+                <div class="luxury-button-container">
+                    <button type="button" class="luxury-room-btn text-white">OUR ROOMS</button>
+                    <button type="button" class="luxury-book-btn">BOOK A ROOM</button>
+                </div>
+            </div>
+            <div class="col-md-6 luxury-image-container">
+                <img src="./images/video.jpg" alt="Luxury Video" class="luxury-image img-fluid">
+            </div>
+        </div>
+
+
+        <!-- Service Section -->
+        <div class="row services-section py-5 text-center" id="services">
+            <div class="col-md-12 services-header">
+                <h4 class="services-subheading text-uppercase">Our Services</h4>
+                <h2 class="services-title text-dark">Explore Our Luxurious <Span> Services</Span></h2>
+            </div>
+
+            <div class="row services-list py-5 gx-5">
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-bed"></i>
+                    </div>
+                    <h3 class="service-title">Rooms & Apartments</h3>
+                    <p class="service-description">Experience ultimate luxury with our beautifully designed rooms and
+                        apartments. Enjoy premium amenities and breathtaking views.</p>
+                </div>
+
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-utensils"></i>
+                    </div>
+                    <h3 class="service-title">Food & Restaurant</h3>
+                    <p class="service-description">Indulge in exquisite fine dining at our world-class restaurants,
+                        serving dishes from around the world crafted by expert chefs.</p>
+                </div>
+
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-spa"></i>
+                    </div>
+                    <h3 class="service-title">Spa & Fitness</h3>
+                    <p class="service-description">Relax and rejuvenate with our luxurious spa treatments and wellness
+                        programs. Stay fit at our state-of-the-art fitness center.</p>
+                </div>
+            </div>
+
+            <div class="row services-list  gx-5">
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-gamepad"></i>
+                    </div>
+                    <h3 class="service-title">Sports & Gaming</h3>
+                    <p class="service-description">Get your adrenaline pumping with a wide range of sports activities
+                        and gaming experiences tailored for every guest.</p>
+                </div>
+
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-calendar-check"></i>
+                    </div>
+                    <h3 class="service-title">Events & Parties</h3>
+                    <p class="service-description">Host your events, conferences, and parties in our premium venues,
+                        with bespoke event planning services at your disposal.</p>
+                </div>
+
+                <div class="col-md-4 service-item">
+                    <div class="service-icon">
+                        <i class="fa fa-dumbbell"></i>
+                    </div>
+                    <h3 class="service-title">Gym & Yoga</h3>
+                    <p class="service-description">Stay in peak shape with our top-of-the-line gym facilities and
+                        relaxing yoga sessions designed to fit your lifestyle.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testiomonal section  -->
+
+        <div class="row testimonials-section py-5 d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="text-center mb-4">
+                    <h4 class="testimonials-subheading">OUR GUESTS LOVE US</h4>
+                    <h2 class="testimonials-title">What Our Guests Are Saying</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 testimonial-item">
+                        <div class="testimonial-card shadow-lg p-4">
+                            <p class="testimonial-text">"The stay was amazing! The service, the rooms, everything was
+                                top-notch. Highly recommended for a relaxing vacation."</p>
+                            <h4 class="testimonial-author">Shelly Thakur</h4>
+                            <div class="testimonial-rating">
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star-half-alt text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 testimonial-item">
+                        <div class="testimonial-card shadow-lg p-4">
+                            <p class="testimonial-text">"Had a wonderful experience. The staff was friendly, and the
+                                amenities were top-notch. The best stay I've ever had!"</p>
+                            <h4 class="testimonial-author">Sania Thakur</h4>
+                            <div class="testimonial-rating">
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 testimonial-item">
+                        <div class="testimonial-card shadow-lg p-4">
+                            <p class="testimonial-text">"Fantastic service and the atmosphere was just perfect. I had a
+                                rejuvenating experience and can't wait to come back!"</p>
+                            <h4 class="testimonial-author"> Kirti Nahar</h4>
+                            <div class="testimonial-rating">
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star-half-alt text-warning"></span>
+                                <span class="fa fa-star-o text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 testimonial-item">
+                        <div class="testimonial-card shadow-lg p-4">
+                            <p class="testimonial-text">"The experience was simply unforgettable. The staff made sure
+                                every detail was perfect. Will definitely return!"</p>
+                            <h4 class="testimonial-author">Tej Singh Thakur</h4>
+                            <div class="testimonial-rating">
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                                <span class="fa fa-star text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- offer section  -->
+        <div class="row special-offers-section py-5">
+            <div class="col-md-12">
+                <div class="text-center special-offers-header mb-5">
+                    <h2 class="special-offers-title">Exclusive Special Offers</h2>
+                    <p class="special-offers-description">Take advantage of our special promotions and save big. Don't
+                        miss out on these limited-time deals!</p>
+                </div>
+
+                <div class="special-offers-cards-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="special-offer-card shadow-lg rounded p-4">
+                                <div class="special-offer-icon mb-3">
+                                    <i class="fas fa-gift fa-3x"></i>
+                                </div>
+                                <h4 class="special-offer-title">Spring Getaway</h4>
+                                <p class="special-offer-description">Book now and get 25% off on all room types. Enjoy a
+                                    relaxing weekend getaway!</p>
+                                <button class="special-offer-btn">Claim Offer</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="special-offer-card shadow-lg rounded p-4">
+                                <div class="special-offer-icon mb-3">
+                                    <i class="fas fa-bed fa-3x"></i>
+                                </div>
+                                <h4 class="special-offer-title">Extended Stay</h4>
+                                <p class="special-offer-description">Stay for 7 nights and pay for only 5! Perfect for a
+                                    long vacation.</p>
+                                <button class="special-offer-btn">Book Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="special-offer-card shadow-lg rounded p-4">
+                                <div class="special-offer-icon mb-3">
+                                    <i class="fas fa-cocktail fa-3x"></i>
+                                </div>
+                                <h4 class="special-offer-title">Complimentary Dinner</h4>
+                                <p class="special-offer-description">Get a complimentary gourmet dinner when you book a
+                                    3-night stay. Don’t miss this delicious deal!</p>
+                                <button class="special-offer-btn">Redeem Offer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section row py-5 text-light d-flex justify-content-center align-items-center text-center"
+            id="contact">
+            <div class="col-md-3 mb-4">
+                <h4 class="footer-title text-uppercase font-weight-bold">Hotel Information</h4>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h4 class="footer-title text-uppercase font-weight-bold">Contact Us</h4>
+                <ul class="footer-contact list-unstyled">
+                    <li><i class="fas fa-map-marker-alt mr-2"></i><a
+                            href="https://www.google.com/maps/place/Netgen+IT+Solutions+Private+limited/@31.0785447,77.177105,17z/data=!3m2!4b1!5s0x39057f4c941bad4f:0xa0026f6193db82cf!4m6!3m5!1s0x3904df2b09f1a247:0xea3959b7fec88169!8m2!3d31.0785447!4d77.1796799!16s%2Fg%2F113hx96bv?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">123
+                            Hotel St.,xyz</a> </li>
+                    <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope mr-2"></i> contact@hotel.com</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h4 class="footer-title text-uppercase font-weight-bold">Quick Links</h4>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#">Our Rooms</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Book Now</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h4 class="footer-title text-uppercase font-weight-bold">Follow Us</h4>
+                <div class="social-media d-flex gap-3 justify-content-center">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom py-3 bg-secondary">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Hotel Name. All rights reserved.</p>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+</div>

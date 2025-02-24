@@ -1,0 +1,913 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* ::selection {
+    color: var(--secondary_color);
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #F1F8FF;
+
+}
+
+:root {
+    --primary_color: #0F172B;
+    --secondary_color: #FEA116;
+    --def_color: #fff;
+}
+
+.top {
+    background-color: var(--primary_color);
+    padding: 15px 30px;
+}
+
+.heading {
+    color: var(--secondary_color);
+}
+
+/* navbar section  */
+.navbar-nav {
+    margin-left: auto;
+    gap: 90px;
+}
+
+.navbar-toggler {
+    border-color: rgb(238, 236, 236);
+}
+
+.nav-link {
+    color: var(--def_color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    color: var(--secondary_color);
+}
+
+.nav-item.dropdown .dropdown-menu {
+    background-color: var(--primary_color);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: var(--def_color);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 161, 22, 0.2);
+    color: var(--secondary_color);
+}
+
+/* banner section  */
+.banner {
+    background-image: url(/shelly/images/carousel-1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 50vh;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(2, 1, 1, 0.67);
+    z-index: 1;
+}
+
+.banner-text {
+    font-weight: bold;
+    color: var(--def_color);
+    font-size: 2rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-title {
+    color: var(--def_color);
+    font-size: 5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner button {
+    font-weight: bold;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin: 5px;
+}
+
+.btn-rooms {
+    background-color: var(--secondary_color);
+}
+
+.btn-rooms:hover {
+    background-color: var(--def_color);
+    color: black;
+}
+
+.btn-book {
+    background-color: var(--def_color);
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: var(--secondary_color);
+    color: var(--def_color);
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-size: 2rem;
+    color: var(--primary_color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    color: var(--primary_color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form .btn {
+    background-color: var(--secondary_color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--def_color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+form .btn:hover {
+    background-color: #d58e00;
+    color: var(--def_color);
+}
+
+/* about section  */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+    background-color: #f8f8f8;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-left {
+    flex: 1 1 48%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-left:hover {
+    transform: translateY(-10px);
+}
+
+.about-left h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.about-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    color: var(--secondary_color);
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.stat-item {
+    text-align: center;
+    width: 30%;
+    padding: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    color: var(--secondary_color);
+}
+
+.stat-item i {
+    font-size: 3rem;
+    color: var(--secondary_color);
+    margin-bottom: 10px;
+}
+
+.stat-item h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-item h3 {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.btn-explore {
+    padding: 15px 30px;
+    background-color: var(--secondary_color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-explore:hover {
+    background-color: #d55c15;
+}
+
+.right {
+    flex: 1 1 48%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right img {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.right img:nth-of-type(1),
+.right img:nth-of-type(3) {
+    max-width: 50%;
+}
+
+.right img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Room section  */
+.section-title {
+    font-size: 1.5rem;
+    color: var(--primary_color);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    color: var(--primary_color);
+    font-weight: bold;
+}
+
+.highlighted-text {
+    color: var(--secondary_color);
+}
+
+/* Room Card Styles */
+.room-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--def_color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+.room-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card-body {
+    padding: 20px;
+}
+
+.room-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary_color);
+}
+
+.room-description {
+    color: var(--primary_color);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.room-rating .star-icon {
+    font-size: 1.25rem;
+    margin-right: 2px;
+}
+
+.room-bath-icon {
+    color: var(--primary_color);
+    font-size: 1rem;
+}
+
+.room-details {
+    font-size: 0.9rem;
+    color: var(--primary_color);
+    margin-top: 10px;
+}
+
+.detail-icon {
+    font-size: 1.25rem;
+    color: var(--secondary_color);
+}
+
+.room-details span {
+    margin-right: 10px;
+    align-items: center;
+}
+
+.room-details .fa {
+    margin-right: 5px;
+}
+
+.room-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--secondary_color);
+    margin-bottom: 15px;
+}
+
+.price-text {
+    font-size: 1rem;
+    color: var(--primary_color);
+}
+
+.price {
+    font-size: 1.1rem;
+    color: var(--secondary_color);
+}
+
+.btn-outline-room {
+    border-color: var(--secondary_color);
+    color: var(--secondary_color);
+}
+
+.btn-outline-room:hover {
+    background-color: var(--secondary_color);
+    color: var(--def_color);
+}
+
+/* luxury room section  */
+.luxury-living-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--primary_color);
+    border-radius: 15px;
+}
+
+.luxury-text-container {
+    max-width: 100%;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.luxury-living-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary_color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.luxury-discovery-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.luxury-description-text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.luxury-button-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.luxury-room-btn,
+.luxury-book-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.luxury-room-btn {
+    background-color: var(--secondary_color);
+    color: var(--def_color);
+    width: 200px;
+    text-align: center;
+}
+
+.luxury-room-btn:hover {
+    background-color: #e88c17;
+    color: #fff;
+}
+
+.luxury-book-btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary_color);
+    color: var(--secondary_color);
+    width: 200px;
+    text-align: center;
+}
+
+.luxury-book-btn:hover {
+    background-color: var(--secondary_color);
+    color: #fff;
+}
+
+.luxury-image-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.luxury-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 500px;
+}
+
+/* Services icon  */
+.services-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 20px;
+
+}
+
+.services-header h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary_color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.services-header h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--def_color);
+    margin-top: 10px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transition: all 0.3sease;
+    backdrop-filter: blur(5px);
+    background-color: #ebebeb;
+    width: 25%;
+    margin: auto;
+}
+
+.service-item:hover {
+    background-color: var(--secondary_color);
+    color: var(--def_color);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover .service-icon i {
+    color: var(--def_color);
+}
+
+
+
+.service-icon {
+    font-size: 3.5rem;
+    color: var(--secondary_color);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 10px;
+}
+
+
+.service-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary_color);
+    margin-bottom: 20px;
+}
+
+.services-title span {
+    color: var(--secondary_color);
+}
+
+.service-description {
+    font-size: 1.1rem;
+    color: var(--primary_color);
+    line-height: 1.6;
+    letter-spacing: 1px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.testimonials-section {
+    background-color: #f8f9fa;
+}
+
+.testimonials-subheading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary_color);
+    letter-spacing: 2px;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary_color);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: var(--primary_color);
+    font-style: italic;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.testimonial-author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary_color);
+    margin-top: 20px;
+}
+
+.testimonial-rating {
+    margin-top: 10px;
+}
+
+.testimonial-rating .fa-star,
+.testimonial-rating .fa-star-half-alt,
+.testimonial-rating .fa-star-o {
+    font-size: 18px;
+    color: #f5a623;
+}
+
+.testimonial-item {
+    margin-bottom: 30px;
+}
+
+/* offer section  */
+.special-offers-section {
+    background-color: #f7f8fa;
+}
+
+.special-offers-header {
+    color: #333;
+}
+
+.special-offers-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary_color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.special-offers-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.special-offers-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.special-offer-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.special-offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.special-offer-icon i {
+    color: var(--primary_color);
+}
+
+.special-offer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary_color);
+    margin-top: 20px;
+}
+
+.special-offer-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.special-offer-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--secondary_color);
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.special-offer-btn:hover {
+    background-color: #e88c17;
+    transform: translateY(-5px);
+}
+
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: var(--primary_color);
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-links li a {
+    font-size: 1rem;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-contact li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+.footer-contact a {
+    text-decoration: none;
+    color: #bbb;
+}
+.footer-contact i {
+    margin-right: 8px;
+    color: #f39c12;
+}
+.social-media .social-icon {
+    font-size: 1.5rem;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+.social-media .social-icon:hover {
+    color: #f39c12;
+}
+.footer-bottom {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer-column {
+    margin-bottom: 25px;
+}
+/* Ensures responsive behavior for footer content */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: left;
+    }
+    .footer-title {
+        font-size: 1.2rem;
+    }
+    .social-media {
+        justify-content: start;
+    }
+    .footer-bottom {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .about-left {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+    .right {
+        flex: 1 1 100%;
+    }
+    .about-title {
+        font-size: 1.5rem;
+    }
+    .about-left h1 {
+        font-size: 1.8rem;
+    }
+    .stat-item h2 {
+        font-size: 1.3rem;
+    }
+    .right img {
+        max-width: 100%;
+    }
+    .btn-explore {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    .luxury-room-btn,
+    .luxury-book-btn {
+        padding: 10px;
+    }
+    .testimonial-item {
+        margin-bottom: 20px;
+    }
+    .col-md-2,
+    .col-md-3 {
+        max-width: 100%;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+    .banner-title {
+        font-size: 3rem;
+    }
+    .special-offer-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 20px;
+        gap: 0;
+    }
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .luxury-living-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .luxury-text-container {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .luxury-image-container {
+        max-width: 100%;
+        height: auto;
+    }
+    .luxury-image {
+        max-height: 400px;
+    }
+    .luxury-button-container {
+        justify-content: center;
+    }
+    .services-section {
+        padding: 40px 20px;
+    }
+    .service-item {
+        padding: 20px;
+        width: auto;
+        margin: 10px;
+    }
+    .service-title {
+        font-size: 1.4rem;
+    }
+    .service-description {
+        font-size: 1rem;
+    }
+}
