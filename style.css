@@ -115,11 +115,12 @@ body {
 
 .btn-rooms {
     background-color: var(--secondary_color);
+    color: var(--def_color);
 }
 
 .btn-rooms:hover {
     background-color: var(--def_color);
-    color: black;
+    color: var(--primary_color);
 }
 
 .btn-book {
